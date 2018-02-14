@@ -11,10 +11,10 @@ def is_authenticated(user):
     """
     if not hasattr(user, 'is_authenticated'):
        return False
-    if callable(user.is_authenticated):
+#     if callable(user.is_authenticated):
         # Will be callable if django.version < 2.0, but is only necessary in
         # v1.9 and earlier due to change introduced in v1.10 making
         # `is_authenticated` a property instead of a callable.
-        return user.is_authenticated()
+#         return user.is_authenticated()
     else:
         return user.is_authenticated

@@ -28,8 +28,8 @@ def track_field(field):
         return False
 
     # 1.8 check
-    elif getattr(field, 'rel', None) is not None and field.rel.to == LogEntry:
-        return False
+    # elif getattr(field, 'rel', None) is not None and field.rel.to == LogEntry:
+    #     return False
 
     return True
 
